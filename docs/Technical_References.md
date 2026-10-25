@@ -4,7 +4,7 @@
 - [Merged PR 70773](https://github.com/pandas-dev/pandas/pull/70773)
 - [Pinned merge source](https://github.com/pandas-dev/pandas/blob/bcd184af891a5231717259d9b77634fc9d071cad/pandas/core/arrays/_arrow_string_mixins.py)
 - [StringDtype method call sites](https://github.com/pandas-dev/pandas/blob/bcd184af891a5231717259d9b77634fc9d071cad/pandas/core/arrays/string_arrow.py)
-- [pandas 3.1.0 release notes](https://pandas.pydata.org/pandas-docs/version/3.1.0/whatsnew/v3.1.0.html)
+- [pandas 3.1.0 release notes](https://pandas.pydata.org/pandas-docs/stable/whatsnew/v3.1.0.html)
 - [String dtype migration](https://pandas.pydata.org/docs/user_guide/migration-3-strings.html)
 - [Python 3.12 re](https://docs.python.org/3.12/library/re.html)
 - [RE2 syntax](https://github.com/google/re2/wiki/Syntax)
