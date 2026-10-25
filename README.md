@@ -60,3 +60,7 @@ The author retains the original full execution files privately. The public origi
 ## License and upstream software
 
 The reproduction code is offered under the MIT License. pandas, PyArrow, RE2 and Python retain their respective upstream licenses. This repository contains focused reproduction scripts, not a copy of the pandas project or its full test suite.
+
+## Separate edge-case follow-up
+
+A separate 30-row follow-up tests backspace spelling `r"\x08"` and mixed RE2-property/shorthand syntax `r"\p{L}\w"` on three dtype representations and all five methods. It used Python 3.12.14, pandas 3.1.0, NumPy 2.5.4 and PyArrow 23.0.1. These checks are not included in the saved 600-row or 630-row totals. See tests/edge_case_checks.py and results/edge_case_checks_310.json. The mixed pattern is not Python-valid, so it has no Python-re result oracle; the file records its observed backend behavior.

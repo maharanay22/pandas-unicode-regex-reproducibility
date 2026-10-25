@@ -1,0 +1,474 @@
+{
+  "methodology": "Targeted edge-case verification, separate from the saved 600-row and 630-row datasets.",
+  "python": "3.12.14",
+  "pandas": "3.1.0",
+  "numpy": "2.5.4",
+  "pyarrow": "23.0.1",
+  "rows": [
+    {
+      "dtype": "str(pyarrow)",
+      "pattern": "\\x08",
+      "input": [
+        "a\bb",
+        "ab"
+      ],
+      "method": "contains",
+      "expected_python": [
+        true,
+        false
+      ],
+      "actual": [
+        true,
+        false
+      ],
+      "agrees_with_python": true
+    },
+    {
+      "dtype": "str(pyarrow)",
+      "pattern": "\\x08",
+      "input": [
+        "a\bb",
+        "ab"
+      ],
+      "method": "match",
+      "expected_python": [
+        false,
+        false
+      ],
+      "actual": [
+        false,
+        false
+      ],
+      "agrees_with_python": true
+    },
+    {
+      "dtype": "str(pyarrow)",
+      "pattern": "\\x08",
+      "input": [
+        "a\bb",
+        "ab"
+      ],
+      "method": "fullmatch",
+      "expected_python": [
+        false,
+        false
+      ],
+      "actual": [
+        false,
+        false
+      ],
+      "agrees_with_python": true
+    },
+    {
+      "dtype": "str(pyarrow)",
+      "pattern": "\\x08",
+      "input": [
+        "a\bb",
+        "ab"
+      ],
+      "method": "replace",
+      "expected_python": [
+        "a-b",
+        "ab"
+      ],
+      "actual": [
+        "a-b",
+        "ab"
+      ],
+      "agrees_with_python": true
+    },
+    {
+      "dtype": "str(pyarrow)",
+      "pattern": "\\x08",
+      "input": [
+        "a\bb",
+        "ab"
+      ],
+      "method": "count",
+      "expected_python": [
+        1,
+        0
+      ],
+      "actual": [
+        1,
+        0
+      ],
+      "agrees_with_python": true
+    },
+    {
+      "dtype": "str(pyarrow)",
+      "pattern": "\\p{L}\\w",
+      "input": [
+        "éé",
+        "aa"
+      ],
+      "method": "contains",
+      "actual": [
+        false,
+        true
+      ]
+    },
+    {
+      "dtype": "str(pyarrow)",
+      "pattern": "\\p{L}\\w",
+      "input": [
+        "éé",
+        "aa"
+      ],
+      "method": "match",
+      "actual": [
+        false,
+        true
+      ]
+    },
+    {
+      "dtype": "str(pyarrow)",
+      "pattern": "\\p{L}\\w",
+      "input": [
+        "éé",
+        "aa"
+      ],
+      "method": "fullmatch",
+      "actual": [
+        false,
+        true
+      ]
+    },
+    {
+      "dtype": "str(pyarrow)",
+      "pattern": "\\p{L}\\w",
+      "input": [
+        "éé",
+        "aa"
+      ],
+      "method": "replace",
+      "actual": [
+        "éé",
+        "-"
+      ]
+    },
+    {
+      "dtype": "str(pyarrow)",
+      "pattern": "\\p{L}\\w",
+      "input": [
+        "éé",
+        "aa"
+      ],
+      "method": "count",
+      "actual": [
+        0,
+        1
+      ]
+    },
+    {
+      "dtype": "string[pyarrow]",
+      "pattern": "\\x08",
+      "input": [
+        "a\bb",
+        "ab"
+      ],
+      "method": "contains",
+      "expected_python": [
+        true,
+        false
+      ],
+      "actual": [
+        true,
+        false
+      ],
+      "agrees_with_python": true
+    },
+    {
+      "dtype": "string[pyarrow]",
+      "pattern": "\\x08",
+      "input": [
+        "a\bb",
+        "ab"
+      ],
+      "method": "match",
+      "expected_python": [
+        false,
+        false
+      ],
+      "actual": [
+        false,
+        false
+      ],
+      "agrees_with_python": true
+    },
+    {
+      "dtype": "string[pyarrow]",
+      "pattern": "\\x08",
+      "input": [
+        "a\bb",
+        "ab"
+      ],
+      "method": "fullmatch",
+      "expected_python": [
+        false,
+        false
+      ],
+      "actual": [
+        false,
+        false
+      ],
+      "agrees_with_python": true
+    },
+    {
+      "dtype": "string[pyarrow]",
+      "pattern": "\\x08",
+      "input": [
+        "a\bb",
+        "ab"
+      ],
+      "method": "replace",
+      "expected_python": [
+        "a-b",
+        "ab"
+      ],
+      "actual": [
+        "a-b",
+        "ab"
+      ],
+      "agrees_with_python": true
+    },
+    {
+      "dtype": "string[pyarrow]",
+      "pattern": "\\x08",
+      "input": [
+        "a\bb",
+        "ab"
+      ],
+      "method": "count",
+      "expected_python": [
+        1,
+        0
+      ],
+      "actual": [
+        1,
+        0
+      ],
+      "agrees_with_python": true
+    },
+    {
+      "dtype": "string[pyarrow]",
+      "pattern": "\\p{L}\\w",
+      "input": [
+        "éé",
+        "aa"
+      ],
+      "method": "contains",
+      "actual": [
+        false,
+        true
+      ]
+    },
+    {
+      "dtype": "string[pyarrow]",
+      "pattern": "\\p{L}\\w",
+      "input": [
+        "éé",
+        "aa"
+      ],
+      "method": "match",
+      "actual": [
+        false,
+        true
+      ]
+    },
+    {
+      "dtype": "string[pyarrow]",
+      "pattern": "\\p{L}\\w",
+      "input": [
+        "éé",
+        "aa"
+      ],
+      "method": "fullmatch",
+      "actual": [
+        false,
+        true
+      ]
+    },
+    {
+      "dtype": "string[pyarrow]",
+      "pattern": "\\p{L}\\w",
+      "input": [
+        "éé",
+        "aa"
+      ],
+      "method": "replace",
+      "actual": [
+        "éé",
+        "-"
+      ]
+    },
+    {
+      "dtype": "string[pyarrow]",
+      "pattern": "\\p{L}\\w",
+      "input": [
+        "éé",
+        "aa"
+      ],
+      "method": "count",
+      "actual": [
+        0,
+        1
+      ]
+    },
+    {
+      "dtype": "ArrowDtype(string)",
+      "pattern": "\\x08",
+      "input": [
+        "a\bb",
+        "ab"
+      ],
+      "method": "contains",
+      "expected_python": [
+        true,
+        false
+      ],
+      "actual": [
+        true,
+        false
+      ],
+      "agrees_with_python": true
+    },
+    {
+      "dtype": "ArrowDtype(string)",
+      "pattern": "\\x08",
+      "input": [
+        "a\bb",
+        "ab"
+      ],
+      "method": "match",
+      "expected_python": [
+        false,
+        false
+      ],
+      "actual": [
+        false,
+        false
+      ],
+      "agrees_with_python": true
+    },
+    {
+      "dtype": "ArrowDtype(string)",
+      "pattern": "\\x08",
+      "input": [
+        "a\bb",
+        "ab"
+      ],
+      "method": "fullmatch",
+      "expected_python": [
+        false,
+        false
+      ],
+      "actual": [
+        false,
+        false
+      ],
+      "agrees_with_python": true
+    },
+    {
+      "dtype": "ArrowDtype(string)",
+      "pattern": "\\x08",
+      "input": [
+        "a\bb",
+        "ab"
+      ],
+      "method": "replace",
+      "expected_python": [
+        "a-b",
+        "ab"
+      ],
+      "actual": [
+        "a-b",
+        "ab"
+      ],
+      "agrees_with_python": true
+    },
+    {
+      "dtype": "ArrowDtype(string)",
+      "pattern": "\\x08",
+      "input": [
+        "a\bb",
+        "ab"
+      ],
+      "method": "count",
+      "expected_python": [
+        1,
+        0
+      ],
+      "actual": [
+        1,
+        0
+      ],
+      "agrees_with_python": true
+    },
+    {
+      "dtype": "ArrowDtype(string)",
+      "pattern": "\\p{L}\\w",
+      "input": [
+        "éé",
+        "aa"
+      ],
+      "method": "contains",
+      "actual": [
+        false,
+        true
+      ]
+    },
+    {
+      "dtype": "ArrowDtype(string)",
+      "pattern": "\\p{L}\\w",
+      "input": [
+        "éé",
+        "aa"
+      ],
+      "method": "match",
+      "actual": [
+        false,
+        true
+      ]
+    },
+    {
+      "dtype": "ArrowDtype(string)",
+      "pattern": "\\p{L}\\w",
+      "input": [
+        "éé",
+        "aa"
+      ],
+      "method": "fullmatch",
+      "actual": [
+        false,
+        true
+      ]
+    },
+    {
+      "dtype": "ArrowDtype(string)",
+      "pattern": "\\p{L}\\w",
+      "input": [
+        "éé",
+        "aa"
+      ],
+      "method": "replace",
+      "actual": [
+        "éé",
+        "-"
+      ]
+    },
+    {
+      "dtype": "ArrowDtype(string)",
+      "pattern": "\\p{L}\\w",
+      "input": [
+        "éé",
+        "aa"
+      ],
+      "method": "count",
+      "actual": [
+        0,
+        1
+      ]
+    }
+  ]
+}
